@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- HTML5 document with English language setting -->
+<html lang="en">
+<head>
+    <!-- Character encoding for proper text rendering -->
+    <meta charset="UTF-8">
+    <!-- Responsive viewport settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO meta description -->
+    <meta name="description" content="Contact Noble Amoako for professional web and mobile development services">
+    <!-- Page title for browser tab -->
+    <title>Contact Me | Noble Amoako</title>
+    
+    <!-- External resources -->
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Local CSS stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <!-- Internal styles for contact page enhancements -->
+    <style>
+        /* Modern professional background for contact hero section */
+        .contact-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1800&q=80') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        
+        /* Enhanced contact section styling */
+        .contact-section {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Contact information card styling */
+        .contact-info {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .info-item i {
+            font-size: 1.5rem;
+            color: #4e54c8;
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+        
+        /* Contact form styling */
+        .contact-form {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #4e54c8;
+            outline: none;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Button styling */
+        .btn {
+            background: #4e54c8;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.3s;
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: #3a40b0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section with navigation -->
+    <header>
+        <div class="header-container">
+            <!-- Logo with stylized span -->
+            <div class="logo">Contact<span>Me</span></div>
+            
+            <!-- Hamburger menu for mobile navigation -->
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <!-- Main navigation menu -->
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero section with professional background image -->
+    <section class="contact-hero">
+        <div class="container">
+            <!-- Main heading with formal invitation -->
+            <h1>Get In Touch With Noble Amoako</h1>
+            <!-- Subheading with call to action -->
+            <p>Let's discuss how I can contribute to your next business project</p>
+        </div>
+    </section>
+
+    <!-- Main contact content section -->
+    <section class="contact-section">
+        <div class="container">
+            <!-- Grid layout for contact information and form -->
+            <div class="contact-grid">
+                <!-- Contact information card -->
+                <div class="contact-info">
+                    <h2>Contact Details</h2>
+                    
+                    <!-- Location information -->
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Office Locations</h3>
+                            <p>Sunyani & Kumasi, Ghana</p>
+                            <p>I also work online</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Email information -->
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Professional Email</h3>
+                            <p>nobleamoako22@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Phone information -->
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Business Phone</h3>
+                            <p>+233 597 524 632</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Business hours -->
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Availability</h3>
+                            <p>Monday - Friday: 7:00 AM - 5:30 PM GMT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact form section -->
+                <div class="contact-form">
+                    <h2>Project Inquiry Form</h2>
+                    <p>Please provide details about your project requirements</p>
+                    
+                    <!-- Form with proper attributes for submission -->
+                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <!-- Name field -->
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Full Name" required>
+                        </div>
+                        
+                        <!-- Email field -->
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Business Email" required>
+                        </div>
+                        
+                        <!-- Subject field -->
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Project Subject">
+                        </div>
+                        
+                        <!-- Budget selection 
+                        <div class="form-group">
+                            <select name="budget" class="form-control">
+                                <option value="">Project Budget Range</option>
+                                <option value="500-1000">$500 - $1,000</option>
+                                <option value="1000-5000">$1,000 - $5,000</option>
+                                <option value="5000+">$5,000+</option>
+                            </select>
+                        </div>-->
+                        
+                        <!-- Message field -->
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Project Details and Requirements" required></textarea>
+                        </div>
+                        
+                        <!-- Submit button -->
+                        <button type="submit" class="btn">
+                            <i class="fas fa-paper-plane"></i> Submit Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer>
+        <div class="container">
+            <!-- Social media links with accessibility labels -->
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <!-- Copyright notice -->
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Noble Amoako. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>

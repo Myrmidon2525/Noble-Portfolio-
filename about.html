@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about Noble Amoako - IT Student, Developer, and Missionary">
+    <title>About Me | Noble Amoako</title>
+    
+    <!-- External Resources -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    
+    <style>
+        /* ===== Global Styles ===== */
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+            --light-text: #666;
+            --dark-bg: #222;
+            --white: #fff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--white);
+        }
+        
+        /* ===== Layout Structure ===== */
+        .centered-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--text-color);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--light-text);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* ===== Header Styles ===== */
+        header {
+            background-color: rgba(44, 62, 80, 0.95);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .logo span {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        /* Navigation */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+        }
+        
+        nav a.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        /* Hamburger Menu (Mobile) */
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+        }
+        
+        /* ===== About Content ===== */
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4rem;
+        }
+        
+        /* Profile Section */
+        .profile-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .about-img {
+            text-align: center;
+        }
+        
+        .about-img img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .about-img img:hover {
+            transform: translateY(-5px);
+        }
+        
+        .img-caption {
+            margin-top: 1rem;
+            font-style: italic;
+            color: var(--light-text);
+        }
+        
+        /* Content Sections */
+        .content-section {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .content-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+            text-align: center;
+        }
+        
+        .content-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        /* Content Images */
+        .content-img {
+            width: 100%;
+            max-width: 700px;
+            margin: 2rem auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Highlight Boxes */
+        .highlight-box {
+            background-color: var(--secondary-color);
+            border-left: 4px solid var(--primary-color);
+            padding: 2rem;
+            margin: 2.5rem auto;
+            border-radius: 0 10px 10px 0;
+            max-width: 700px;
+        }
+        
+        .highlight-box h4 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 1.4rem;
+        }
+        
+        /* Lists */
+        .custom-list {
+            list-style: none;
+            padding-left: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .custom-list li {
+            padding: 0.8rem 0;
+            position: relative;
+            padding-left: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .custom-list li:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 900px;
+            margin: 3rem auto;
+        }
+        
+        .skill-category {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .skill-header {
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .skill-category h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+        
+        .skill-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .skill-list li {
+            padding: 0.7rem 0;
+            font-size: 1.1rem;
+        }
+        
+        /* Mission Gallery */
+        .mission-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+        
+        .mission-gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .mission-gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        /* ===== Footer ===== */
+        footer {
+            background-color:rgba(44, 62, 80, 0.95);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .social-link {
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .footer-bottom {
+            font-size: 1rem;
+            color: #aaa;
+        }
+        
+        /* ===== Responsive Design ===== */
+        @media (max-width: 992px) {
+            .profile-section {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .about-img {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .section {
+                padding: 4rem 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title p {
+                font-size: 1.1rem;
+            }
+            
+            /* Mobile Navigation */
+            .hamburger {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 350px;
+                height: 100vh;
+                background-color: var(--white);
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                padding: 6rem 2rem 2rem;
+                transition: right 0.3s ease;
+                z-index: 999;
+            }
+            
+            nav.active {
+                right: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .centered-container {
+                padding: 0 1.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .mission-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== Header ===== -->
+    <header>
+        <div class="centered-container">
+            <div class="header-container">
+                <div class="logo">Noble<span>Portfolio</span></div>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav id="mainNav">
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="services.html">Services</a></li>
+                         <!--<li><a href="blog.html">Blog</a></li>-->
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== Main Content ===== -->
+    <main>
+        <section id="about-page" class="section">
+            <div class="centered-container">
+                <div class="section-title">
+                    <h2>My Journey</h2>
+                    <p>From student to developer and missionary</p>
+                </div>
+                
+                <div class="about-content">
+                    <!-- Profile Section -->
+                    <div class="profile-section">
+                        <div class="about-img">
+                            <img src="images/e.jpg" alt="Noble Amoako portrait" loading="lazy">
+                            <div class="img-caption">Noble Amoako at UENR Campus</div>
+                        </div>
+                        
+                        <div class="about-text">
+                            <h3>Who I Am</h3>
+                            <p>My name is <strong>Noble Amoako</strong>, an Information Technology (IT) student at the University of Energy and Natural Resources (UENR) in Sunyani, Ghana. I am a passionate software developer, creative graphics designer, and dedicated ministry missionary.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Collaboration Image -->
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                         alt="Team collaboration" 
+                         class="content-img" 
+                         loading="lazy">
+                    
+                    <!-- Education Section -->
+                    <div class="content-section">
+                        <h3>Education</h3>
+                        <p>Currently pursuing my Bachelor's degree in Information Technology at UENR, specializing in software development and network systems.</p>
+                        
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="University campus" 
+                             class="content-img" 
+                             loading="lazy">
+                        
+                        <div class="highlight-box">
+                            <h4>Key Coursework:</h4>
+                            <ul class="custom-list">
+                                <li>Advanced Programming Concepts</li>
+                                <li>Web Development Technologies</li>
+                                <li>Database Management Systems</li>
+                                <li>Network Security Fundamentals</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Skills Section -->
+                    <div class="content-section">
+                        <h3>Technical Skills</h3>
+                        <p>I've developed expertise in multiple areas of technology through both academic study and practical experience.</p>
+                        
+                        <div class="skills-container">
+                            <!-- Web Development -->
+                            <div class="skill-category">
+                                <div class="skill-header">
+                                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" 
+                                         alt="Web Development" 
+                                         class="skill-icon">
+                                    <h4>Web Development</h4>
+                                </div>
+                                <ul class="skill-list">
+                                    <li>HTML5 & CSS3</li>
+                                    <li>JavaScript (ES6+)</li>
+                                    <li>React.js</li>
+                                    <li>Node.js</li>
+                                    <li>PHP</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Mobile Development -->
+                            <div class="skill-category">
+                                <div class="skill-header">
+                                    <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                         alt="Mobile Development" 
+                                         class="skill-icon">
+                                    <h4>Mobile Development</h4>
+                                </div>
+                                <ul class="skill-list">
+                                    <li>Flutter</li>
+                                    <li>Dart</li>
+                                    <li>Firebase</li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Design -->
+                            <div class="skill-category">
+                                <div class="skill-header">
+                                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" 
+                                         alt="Design" 
+                                         class="skill-icon">
+                                    <h4>Design</h4>
+                                </div>
+                                <ul class="skill-list">
+                                    <li>Adobe Photoshop</li>
+                                    <li>Adobe Illustrator</li>
+                                    <li>Affinity</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Mission Work -->
+                    <div class="content-section">
+                        <h3>Mission Work</h3>
+                        <p>Beyond technology, I'm deeply committed to my faith and missionary work, serving communities through various initiatives.</p>
+                        
+                        <div class="mission-gallery">
+                            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                                 alt="Community teaching" 
+                                 loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Technology training" 
+                                 loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                                 alt="Youth counseling" 
+                                 loading="lazy">
+                        </div>
+                        
+                        <div class="highlight-box">
+                            <h4>Volunteer Activities:</h4>
+                            <ul class="custom-list">
+                                <li>Educational support and assistance to friends and colleagues</li>
+                                <li>Technology training in rural and urban communities</li>
+                                <li>Christian Spiritual guidance and counseling</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer>
+        <div class="centered-container">
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Noble Amoako. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== JavaScript ===== -->
+    <script>
+        // Update copyright year automatically
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Mobile menu functionality
+        const hamburger = document.getElementById('hamburger');
+        const mainNav = document.getElementById('mainNav');
+        
+        hamburger.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            hamburger.innerHTML = mainNav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!mainNav.contains(event.target) && event.target !== hamburger) {
+                mainNav.classList.remove('active');
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+    </script>
+</body>
+</html>
